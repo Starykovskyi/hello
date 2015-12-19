@@ -9,12 +9,13 @@ import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
-
+//Contact entity
 @Entity
 @Cacheable
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 @Table(name = "contacts")
 public class Contact implements Serializable{
+
     @Id
     @Column(name= "id")
     @Index(name = "user_id_hidx")
